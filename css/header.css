@@ -1,76 +1,71 @@
 .header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: white;
-   
+    padding-top: 15px;
 }
-.search-header {
-    position: relative;
-    left: 28px;
-    top: 11px;
-    width: 22px;
-    height: 22px;
-}
+
 .headerleft {
     display: flex;
-    width: 50%;
-    height: 42px;
-    top: 11px;
-    padding: 0px;
-    gap: 0px;
-}
-.headerleft button {
-    padding: 0;
-    position: relative;
-    left: 0;
-    background: none;
-    border: none;
-
+    display: inherit;
+    flex-direction: row;
 }
 
 .header-logo {
     display: flex;
+    margin-right: 25px;
+}
+
+
+.search {
+    display: flex;
     align-items: center;
-    justify-content: left;
-    width: 94.34px;
-    height: 34px;
-    left: 24px;
-    padding: 0px;
-    gap: 0px;
-
 }
 
-.left {
-    width: 300px;
+.search-input {
+    border: 1px solid #D9D9D9;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
     height: 42px;
-    padding: 13px 24px 13px 37px;
-    gap: 0px;
-    border-radius: 8px 0px 0px 8px;
-    border: 1px solid rgba(217, 217, 217, 1);
-   
+    background: url(../images/icons/search-input.svg) no-repeat;
+    background-position: left 13px bottom 13px;
+    padding-left: 37px;
 }
-.right {
-width: 254px;
-height: 42px;
-padding: 13px 9px 13px 17px;
-gap: 0px;
-border: 1px solid rgba(217, 217, 217, 1);
+
+.search-place {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #D9D9D9;
+    border-bottom: 1px solid #D9D9D9;
+    height: 42px;
+    padding-left: 15px;
+    padding-right: 95px;
+    
+}
 
 
+.search-input::placeholder {
+    font-size: 16px;
 }
-.search-box button {
-    background-color: #f64060;
-    border: none;       
+
+#btn-search {
+    height: 42px;
     width: 42px;
-    height: 42px;
-    left: 252px;
-    padding: 11px 0px 0px 0px;
-    gap: 0px;
-    border-radius: 0px 8px 8px 0px;
-
+    background-color: #F65858;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    align-content: center;
+    padding-left: 10px;
+    
 }
+
+#btn-search:hover {
+    background-color: #d64b4b;
+}
+
+button {
+    border: none;
+}
+
 
 .headerright a{
     text-decoration: none;
@@ -93,69 +88,78 @@ border: 1px solid rgba(217, 217, 217, 1);
 }
 .sign-up-button {
     background-color: rgba(0, 121, 138, 1);
-    width: 125.28px;
-    height: 40px;
     top: 322.5px;
     padding: 8px 15.8px 8px 16px;
     gap: 0px;
     border-radius: 8px;
     border: none;
     color: rgba(255, 255, 255, 1);
-
-
-
 }
 
-.header-box {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 1196px;
-    height: 461px;
-    left: 362px;
-    gap: 0px;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    margin: 0 auto;
+
+
+@media (max-width: 1600px) {
+      
+    .headerright {
+        margin-left: 0;
+    }
+    .headerright {
+        margin-right: 0;
+    }
+    .headerleft {
+        margin-left: 0;
+    }
+   
+}
+@media (max-width: 992px) {
+      
+    #search-place {
+        display: none;
+    }
    
 }
 
+@media (max-width: 760px) {
+      
+    .headerleft {
+        flex-direction: column;
+        width: 100vw;
+        position: relative;
+    }
+    .header {
+        position: relative;
+    }
+   #header-logo {
+    margin-bottom: 10px;
+   }
+    .search {
+        width: 100%;
+    }
+    .search-input {
+        width: 100%;
+    }
+  
+   .headerright {
+    position: absolute;
+    right: 0px;
+   }
 
-.headertitle {
-    font-size: 42px;
-    text-align: left;
-    color: (33, 33, 33, 1);
-    width: 600.61px;
-    height: 104px;
-    top: 98px;
-    gap: 0px;
+   #sign-up-button {
+    margin-right: 0;
+   }
 }
 
-.headertext {
-    font-size: 16px;
-    margin-bottom: 20px;
-    width: 608.93px;
-    height: 72px;
-    top: 226.5px;
-    gap: 0px;
-    
-}
-.join_meetup {
-    width: 125.28px;
-    height: 40px;
-    top: 322.5px;
-    padding: 8px 15.8px 8px 16px;
-    gap: 0px;
-    border: none;
-    border-radius: 8px;
-    color:  rgba(255, 255, 255, 1);
-    background: rgba(0, 121, 138, 1);
+@media (max-width: 340px){
+    .lheader-logo {
+        max-width: 75px;
 
-}
+  }
 
-.headerboxright img {
-    width: 100%;
-    max-width: 400px;
-    height: auto;
+  #sign-up-button {
+    margin-left: 8px;
+  }
+
+  #log-in {
+    margin-left: 8px;
+  }
 }
